@@ -1,31 +1,95 @@
-# Built things
-_Debug/
-Compiled/
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela Colorida</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f6;
+            padding: 20px;
+        }
 
-# AudioCache can be rebuilt from sources
-AudioCache/
+        /* Container para permitir rolagem lateral no celular se a tabela for grande */
+        .tabela-container {
+            overflow-x: auto;
+            margin: 20px auto;
+            max-width: 800px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+        }
 
-# Lockfile
-_OpenInEditor.lock
+        /* Estilização Geral da Tabela */
+        table {
+            width: 100%;
+            border-collapse: collapse; /* Remove espaços duplos entre as bordas */
+            background-color: #fff;
+        }
 
-# User settings
-Game.agf.user
-*.crm.user
+        /* Estilo do Cabeçalho (Linha de Cima) */
+        th {
+            background-color: #2c3e50; /* Cor escura de fundo */
+            color: #ffffff; /* Texto branco */
+            text-align: left;
+            padding: 12px 15px;
+            font-size: 1rem;
+        }
 
-# Backups
-Game.agf.bak
-backup_acsprset.spr
+        /* Estilo das Células de Dados */
+        td {
+            padding: 12px 15px;
+            color: #333333;
+            border-bottom: 1px solid #e0e0e0; /* Linha sutil divisória */
+        }
 
-# Memory dumps
-*.dmp
+        /* Efeito Zebra: Cores alternadas nas linhas */
+        tr:nth-child(even) {
+            background-color: #f8f9fa; /* Linhas pares ganham um fundo cinza bem claro */
+        }
 
-# Temporary files
-# temporarily created during sprite or room background compression
-~aclzw.tmp
-# temporary, main game data, before getting packed into exe
-game28.dta
-# temporary build of the game before being moved to Compiled/ folder
-*.exe
+        /* Efeito de Destaque ao passar o mouse por cima */
+        tr:hover {
+            background-color: #e8f4fd; /* Linha fica azul clara ao passar o mouse */
+            transition: background-color 0.2s ease;
+        }
+    </style>
+</head>
+<body>
 
-# Log files
-warnings.log
+    <div class="tabela-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Aluno</th>
+                    <th>Curso</th>
+                    <th>Situação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Wiliamo</td>
+                    <td>Sis. de Info</td>
+                    <td>Aprovado</td>
+                </tr>
+                <tr>
+                    <td>Larson</td>
+                    <td>Enfermagem</td>
+                    <td>Reprovado</td>
+                </tr>
+                <tr>
+                    <td>Marianne</td>
+                    <td>Administração</td>
+                    <td>Pendente</td>
+                </tr>
+                <tr>
+                    <td>Lorena</td>
+                    <td>Sis. de Info</td>
+                    <td>Aprovado</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
